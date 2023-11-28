@@ -55,14 +55,12 @@ if user_fetal_file is not None:
 
     df2 = user_df.copy()
     
- 
+    user_df.style.apply(lambda x: ('background_color: lime' if i==1 else ('background_color: yellow' if i==2 else 'background_color: orange')) for i in user_df['Predicted Classification'])
 
-    def normal_color(val):
-        if val == 1:
-            color = 'lime'
-        return ['color: %s' % color in user_df['Predicted Classification']]
+
     
-    user_df.style.applymap(normal_color)
+
+    #user_df.style.applymap(normal_color)
     #user_df.style.background_gradient(cmap= 'summer', user_df['Predicted Classification'])
     #23
     #user_df = user_df.style.applymap(class_color,user_df['Predicted Classification'].values)
@@ -81,6 +79,7 @@ if user_fetal_file is not None:
     with tab3:
         df = pd.read_csv('rf_class_report.csv', index_col=0)
         st.dataframe(df)
+            
 
 
 
