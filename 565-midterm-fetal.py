@@ -13,9 +13,9 @@ st.title("Classifying Fetal Health: A Machine Learning App")
 st.image('fetal_health_image.gif')
 
 # Decision Tree Model
-dt_pickle = open('dt_fetal.pickle', 'rb') 
-dt_model = pickle.load(dt_pickle) 
-dt_pickle.close()
+#dt_pickle = open('dt_fetal.pickle', 'rb') 
+#dt_model = pickle.load(dt_pickle) 
+#dt_pickle.close()
 
 # Random Forest Model
 rf_pickle = open('rf_fetal.pickle', 'rb') 
