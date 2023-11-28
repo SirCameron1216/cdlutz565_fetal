@@ -57,15 +57,6 @@ if user_fetal_file is not None:
     
     user_df.style.apply(lambda x: ('background_color: lime' if i==1 else ('background_color: yellow' if i==2 else 'background_color: orange')) for i in user_df['Predicted Classification'])
 
-
-    
-
-    #user_df.style.applymap(normal_color)
-    #user_df.style.background_gradient(cmap= 'summer', user_df['Predicted Classification'])
-    #23
-    #user_df = user_df.style.applymap(class_color,user_df['Predicted Classification'].values)
-    #user_df['Predicted Classification'].style.apply(normal_color)
-
     st.subheader('Predicting User-Provided Fetal Health:')
     st.write(user_df)
     #st.dataframe(df2)
